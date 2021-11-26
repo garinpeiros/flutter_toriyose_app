@@ -1,16 +1,26 @@
-# toriyose_app
+# flutter_toriyose_app
 
-A new Flutter application.
+楽天商品 API を利用した Flutter アプリです。
+過去に個人でリリースした Swift 製アプリを Flutter で作り直してみた「土台」をアップしています。
 
-## Getting Started
+https://play.google.com/store/apps/details?id=com.wixsite.otoriyosegurume11n.toriyose
 
-This project is a starting point for a Flutter application.
+## Atomic Design を採用
 
-A few resources to get you started if this is your first Flutter project:
+Atomic Design を採用し、パーツの粒度に応じて分解する方法をとりました。
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### atoms(原子)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+「ラベル」「ボタン」というように、これ以上分けられないような単位の UI を atoms ディレクトリに配置しました。
+
+### molecules(分子)
+
+「ラベル」「ボタン」の組み合わせでできているパーツを molecules ディレクトリに配置しました。
+
+### organisms(有機体)
+
+テーブルのレコードなど他の molecules の集まりで構成されたパーツを organisms ディレクトリに配置しました。
+
+## Riverpod による状態管理
+
+https://riverpod.dev/
